@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=content-width, initial-scale=1.0">
+<title>Stock Buy</title>
+<script src="https://kit.fontawesome.com/1c8d865763.js" crossorigin="anonymous"></script>
+<link rel="icon" type="img/x-icon" href="./assets/images/cryptocurrency.png">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navigatin bar start -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-title" >
+                <a href="./userLanding.html"><img src="./assets/images/cryptocurrency.png" alt="cryptocurrency" height="30px"><p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="#">Market&nbsp;<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoMarketAfterLogin.html">Crypto</a></li>
+                            <li><a href="./stockMarketAfterLogin.html">Stock</a></li>
+                        </ul>
+                </li>
+                    <li>
+                        <a href="#">Trade&nbsp;<i class="fa fa-caret-down"></i></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoTradeAfterLogin.html">Crypto</a></li>
+                            <li><a href="./stockTradeAfterLogin.html">Stock</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="./learnAfterLogin.html">Learn</a></li>
+                </ul>
+            </div>  
+            <div class="nav-loggedin-buttons">
+                <a href="./wallet.html" class="wallet-icon">
+                     <img src="./assets/images/wallet.svg" alt="wallet" height="30px">
+                </a>
+                <div class="nav-links">
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="./assets/images/shiba-inu.png" alt="shiba-inu" height="30px" style="background-color:bisque;border-radius: 50%;padding: 2px">
+                            </span>
+                            &nbsp;
+                            <span style="position: relative; bottom: 10px;">
+                                <a href="#" class="login"><span class="fetch-username"></span>&nbsp;<i class="fa fa-caret-down"></i></a>      
+                            </span>  
+                            <ul class="dropdown">
+                                <li><a href="./profile.html">Profile</a></li>
+                                <li><a href="./settings.html">Settings</a></li>
+                                <li><a href="./index.html" class="login">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>   
+    <!-- navigation bar end -->
+    <!-- wallet page -->
+     <section class="buy-page-container">
+        <div class="graph-buy-section">
+            <div class="graph-section">
+                <div id="stock-details">
+
+                </div>
+                <div class="graph">
+                    <img src="./assets/images/one_day_stock.png" alt="One Day stocks" id="oneday">
+                    <img src="./assets/images/one_week_stock.png" alt="One Week stocks" id="oneweek" style="display: none;">
+                    <img src="./assets/images/one_month_stock.png" alt="One Month stocks" id="onemonth" style="display: none;">
+                    <img src="./assets/images/one_year_stock.png" alt="One Year stocks" id="oneyear" style="display: none;">
+                    <img src="./assets/images/five_year_stock.png" alt="Five Years stocks" id="fiveyears" style="display: none;">
+                </div>
+                <div class="graph-buttons">
+                    <button onclick="oneDay()">1D</button>
+                    <button onclick="oneWeek()">1W</button>
+                    <button onclick="oneMonth()">1M</button>    
+                    <button onclick="oneYear()">1Y</button>
+                    <button onclick="fiveYears()">5Y</button>
+                </div>
+            </div>
+            <div class="buy-section">
+                <div style="display: flex;align-items: center; justify-content: space-between;margin-bottom: 20px;">
+                    <label for="quantity">Quantity</label>
+                    <div style="display: flex;" class="quantity-field">
+                        <button onclick="minusOne()">-</button>
+                        <input type="number" id="quantity" name="quantity" class="textbox-styling" style="width: 55px;text-align: center;margin: auto;" oninput="quantityOnChange()" value="1">  
+                        <button onclick="plusOne()">+</button>
+                    </div> 
+                </div>
+                <br>
+                <label for="stock-buy-price">Price (₹)</label>
+                <input type="text" id="stock-buy-price" name="stock-buy-price" class="textbox-styling" style="width: 250px;" readonly><br>
+                <button type="button" id="buy-button" onclick="transactionComplete()">Buy</button><br>
+                <button type="button" id="sell-button" onclick="transactionComplete()">Sell</button>
+            </div>
+        </div> 
+     </section>
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 <strong>stockrypt</strong>. All rights reserved.</p>
+            <p>Combining the best of Crypto & Stock Exchange for smarter investments</p>
+        </div>
+        <div class="company-socials">
+            <div>
+                <ul>
+                    <li>Company</li>
+                    <li><a href="./index.html#about-us">About us</a></li>
+                    <li><a href="./privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="./termsOfService.html" target="_blank">Terms of Service</a></li>
+                    <li><a href="./userLanding.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Socials</li>
+                    <li><a href="https://x.com" target="_blank" >X (Formerly Twitter)</a></li>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>           
+            </div>  
+        </div> 
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/stockCryptoBuy.js"></script>
+</body>
+</html>

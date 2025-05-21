@@ -1,0 +1,954 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #121214;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+sup{
+    color: #eb9903;
+}
+/* navbar styling */
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #101013;
+    align-items:center ;
+    z-index: 999;
+    border-bottom:2px solid #1d1d20 ;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    transition: all ease 0.3s;
+}
+.nav-title a{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.nav-links a{
+    padding: 20px 0;
+}
+.nav-links a:hover{
+    color: orange;
+    cursor: pointer;
+}
+.nav-links a:active{
+    color: #b35701;
+}
+.nav-links ul li{
+    display: inline-block;
+    list-style: none;
+    margin:0 20px;
+}
+/* logo styling */
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+}
+.logo span{
+    color:#00ffcc;
+}
+/* navbar dropdown menu styling */
+.dropdown{
+    position: absolute;
+    background-color: #101013;
+    list-style: none;
+    padding: 0.5rem 0;
+    width: 150px;
+    margin-top: -30px;
+    display: none;
+    box-shadow: 0 25px 45px #10101342;
+    text-align: center;
+}
+.nav-links ul :hover .dropdown{
+    display: block;
+    margin: 0;
+}
+.dropdown li{
+    padding: 10px;
+}
+/* signup and login button styling and wallet */
+.login:hover{
+    color: #fd7d02;
+}
+.login:active{
+    color: #b35701;
+}
+.signup-button{
+    background-color: #fd7d02;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 50px;
+    border: none;
+    font-size: 15px;
+    margin-left: 15px;
+    transition: all ease 0.3s;
+}
+.signup-button:hover{
+    box-shadow: inset;
+    cursor: pointer;
+    background-color: #ce6503;
+    color:white;
+}
+.signup-button:active{
+    background-color:#b35701 ;
+}
+.wallet-icon{
+    display: flex;
+    padding: 5px;
+    border-radius: 50%;
+}
+.wallet-icon:hover{
+    background-color: #ce6503;
+}
+.nav-loggedin-buttons{
+    display: flex;
+    align-items: center;
+}
+::-ms-reveal{
+    filter: invert(100%);
+}
+/* homepage body section styling */
+.crypto-section{
+    background-color: #f5f8ff; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    text-align: center;
+}
+.crypto-slogan{
+    font-size: 4em;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 500;
+    color: #000000;
+}
+.new-user-reward-line{
+    font-size: 1em;
+    text-align: center;
+}
+.get-started{
+    background-color: #fd7d02;
+    border: none;
+    height: 3em;
+    width: 9em;
+    color: #fff;
+    border-bottom: 3px solid #fab472;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.get-started:hover{
+    cursor: pointer;
+    background-color: #f17500;
+}
+.get-started:active{
+    background-color: #d66802;
+    border: none;
+}
+.stock-section{
+    background-color: #1c1c1f;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3rem 0;
+}
+.stock-slogan{
+    color: white;
+    font-size: 4em;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 500;
+}
+/* about us */
+#about-us{
+    background: url("../images/blockchain.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+#about-us span p{
+    text-align: center;
+    font-size: 2.3em;
+    font-family: "Tektur", sans-serif;
+    font-weight: 500;
+    color: orange;
+}
+.about-us-container{
+    padding: 20px 75px;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    backdrop-filter: blur(10px);
+}
+.about-us-titles{
+    font-size: 1.5em;
+    margin-bottom: 50px;
+    font-family: "Tektur", sans-serif;
+    position: relative;
+}
+.about-us-sections{
+    margin: 50px 0;
+}
+.about-us-titles {
+    display: inline-block;
+    position: relative;
+}
+
+.about-us-titles:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.about-us-sections:hover .about-us-titles:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+#contact-us {
+    padding: 40px 20px;
+    background-color: #f5f8ff;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  #contact-us h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  #contact-us p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+  
+  #contact-us .contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  
+  #contact-us .contact-item {
+    text-align: center;
+  }
+  
+  #contact-us .contact-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  #contact-us form {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  #contact-us form label {
+    font-size: 1.1em;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  #contact-us form input,
+  #contact-us form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 1em;
+    border: none;
+    outline: 2px solid black;
+  }
+  
+  #contact-us form input:focus,
+  #contact-us form textarea:focus {
+    outline:2px solid #fd7d02;
+  }
+
+  #contact-us form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  #contact-us form button:hover {
+    background-color: #45a049;
+  }
+  #contact-us form button:active {
+    background-color: #377c3b;
+  }
+  
+/* footer styling */
+footer{
+    background-color: #101013; 
+    color: #fff;
+    padding: 20px 0; 
+    display: flex; 
+    justify-content: space-between;
+    border-top: 2px solid #1d1d20;
+}
+footer ul{
+    list-style: none;
+}
+footer li{
+    margin:10px;
+}
+footer a{
+    color: #b3b1b1;
+}
+footer a:hover{
+    color: #fd7d02;
+}
+.copyright{
+    margin-left: 50px;
+}
+.company-socials{
+    display: flex;
+    margin-right: 50px;
+}
+.terms-service-container,.privacy-policy-container{
+    margin: 10vh auto;
+    width: 60vw;
+    border: 1px solid white;
+    padding: 50px;
+    border-radius: 10px;
+}
+/* Sign up stylying */
+.sign-up-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.712);
+    backdrop-filter: blur(4px);
+    top:0;
+    left:0;
+    height: 103vh;
+    width: 99.2vw;
+    padding: 60px 100px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.sign-up-form{
+    background-color: #101013;
+    color: #bababa;
+    padding: 30px 75px;
+}
+.disclaimer{
+    width: 460px;
+    margin-top: 10px;
+    font-size: 0.8em;
+    padding: 0 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: rgb(180, 180, 180);
+    color: black;
+}
+#email,#password,.textbox-styling{
+    display:block;
+    outline: none;
+    border:none;
+    width: 500px;
+    height: 42px;
+    margin: 5px 0 30px 0;
+    font-size: 16px;
+    border-radius: 3px;
+    background-color: #191a1f;
+    color: white;
+}
+#email:focus,#password:focus,.textbox-styling:focus{
+    outline:2px solid #fd7d02;
+    transition:0.1s ease;
+}
+#google,#sign-up,#log-in{
+    display: block;
+    width: 500px;
+    height: 42px;
+    padding: 8px 0;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-family:"Montserrat", sans-serif;
+    font-weight: 600;
+    transition: all ease 0.3s;
+}
+#google{
+    background-color: #2894f9;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#google:hover{
+    background-color:#1c7dd8;
+    cursor: pointer;
+}
+#google:active{
+    background-color:#0d5fac;
+}
+#google p{
+    margin-left:10px ;
+}
+#sign-up,#log-in{
+    background-color: #fd7d02;
+    margin-top: 30px;
+}
+#sign-up:hover,#log-in:hover,.orange-button:hover{
+    background-color:#da6b04;
+    cursor: pointer;
+}
+#sign-up:active,#log-in:active,.orange-button:active{
+    background-color:#9c4d04;
+}
+#agree:hover{
+    cursor: pointer;
+}
+.sign-up-form a, .support-email{
+    color: #fd7d02;
+}
+.sign-up-form a:hover,.support-email:hover{
+    text-decoration: underline;
+}
+
+.forgot-password-container{
+    margin: 90px 0 0 50px;
+}
+.orange-button{
+    /* display: inline; */
+    background-color: #fd7d02;
+    width: 150px;
+    height: 42px;
+    padding: 8px 0;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-family:"Montserrat", sans-serif;
+    transition: all ease 0.3s;
+}
+.blue-button{
+    background-color: cornflowerblue;
+    width: 150px;
+    height: 42px;
+    padding: 8px 0;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-family:"Montserrat", sans-serif;
+    transition: all ease 0.3s;
+}
+.blue-button:hover{
+    cursor: pointer;
+    background-color: rgb(85, 127, 204);
+}
+.blue-button:active{
+    background-color: rgb(71, 106, 170);
+}
+.blue-button:disabled,
+.blue-button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+.reset-password-container{
+    margin-top: 50px;
+}
+.reset-password-container h3{
+    margin-bottom: 50px;
+}
+.div-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25vh auto;
+}
+.otp-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.otp-input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    outline: none;
+}
+.otp-input:focus {
+    outline: 2px solid #fd7d02;
+}
+/* learm section */
+.learn-section{
+    padding-top: 70px;
+    margin-left: 70px;
+}
+
+/* market stock page styling */
+.stock-market-container {
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-bottom: 65px;
+}
+.stock-market-container table {
+    width: 80%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+.stock-market-container th {
+    background-color: #0077b6;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.stock-market-container th:hover {
+    background-color: #4a6fa5;
+}
+.stock-market-container td {
+    padding: 12px;
+    border-bottom: 1px solid #c9c7c7;
+    font-size: 16px;
+    text-align: center;
+}
+.stock-market-container span {
+    font-weight: bold;
+    color: green;
+}
+.stock-market-container tr:hover {
+    background-color: #dff6ff;
+    transition: background-color 0.3s ease;
+}
+
+/* wallet page styling */
+.wallet-container {
+    display: flex;
+    justify-content:space-around;
+    width: 70vw;
+    margin:10vh auto;
+}
+.wallet,
+.money-actions {
+    background: rgb(43, 44, 44);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 30vw;
+    text-align: center;
+    color: #ffffff;
+    height: 25vh;
+    margin: 30px;
+}
+.transactions{
+    width: 25%;
+    padding: 20px;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+.wallet-container h2 {
+    margin-bottom: 10px;
+}
+
+.balance {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.conversion {
+    color: rgb(172, 166, 166);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.equivalent {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.wallet-container input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.wallet-container input:focus{
+    outline:3px solid #fd7d02;
+    transition:0.1s ease;
+}
+
+.action-buttons button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.action-buttons button:nth-child(1) {
+    background-color: #28a745;
+}
+
+.action-buttons button:nth-child(2) {
+    background-color: #dc3545;
+}
+
+.transactions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transactions li {
+    background: rgb(239, 243, 243);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+}
+
+.wallet-container .icon {
+color: #eb9903;
+}
+
+/* user login landing page stypling */
+.landing-page-container h2,.landing-page-container h3{
+    color: white;
+    /* margin-left: 50px; */
+}
+.hot,.listing,.gainer,.volume
+{
+    /* background-color: aliceblue; */
+    border: 1px solid white;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;    
+    padding: 5px;      
+}
+.toggle
+{
+    /* margin-top: 30px; */
+    padding-bottom: 70px;
+    /* padding-left: 30px; */
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+}
+.toggle1
+{
+    /* padding-top: 30px; */
+    padding-bottom: 50px;
+    /* padding-left: 30px; */
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+}
+.toggle1 table{
+    width: auto;
+    margin: auto;
+}
+.one,.two,.three,.four
+{
+    /* background-color: aliceblue; */
+    border: 1px solid white;
+    width: 250px;
+    /* height: auto; */
+    border-radius: 10px; 
+    cursor: pointer;
+    display: flex; 
+    align-items: center;
+}
+.landing-page-container h5,.landing-page-container h6 {
+    display: inline; 
+    margin: 0 10px; 
+}
+#more {
+    color: blue; 
+    cursor: pointer;
+}
+.circle {
+    border-radius: 50%; 
+    border: 3px solid #3498db; 
+        
+}
+.landing-page-container table {
+    border-collapse: collapse; 
+    width: 100%;
+    margin: auto;
+}
+.landing-page-container th,.landing-page-container td {
+    
+    padding: 10px;
+    text-align: left;
+}
+/* crypto market page styling */
+.crypto-market-container {
+            
+    top: 40px;
+    bottom: 60px;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top:50px;
+    padding-bottom: 60px;
+}
+.crypto-market-container h1 {
+    margin:30px 10px;
+    color: #FFD700; 
+}
+.crypto-market-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.crypto-market-container th, .crypto-market-container td {
+    border: 1px solid #666666; 
+    padding: 10px;
+    text-align: center;
+}
+.crypto-market-container th {
+    background-color: #30ACA6; 
+    color: #FFFFFF;
+    font-weight: bold; 
+}
+.crypto-market-container tr:nth-child(even) {
+    background-color: #2E2E2E; 
+}
+.crypto-market-container tr:nth-child(odd) {
+    background-color: #3E3E3E; 
+}
+.crypto-market-container tr:hover {
+    background-color: #9e9494; 
+}
+.crypto-market-container th:hover {
+    background-color: #1f706c; 
+}
+/* crypto trade page styling */
+section .crypto_box{
+    width: 220px;
+    height: 150px;
+    background-color: #515151;
+    display: inline-block;
+    margin-top: 80px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding-left: 10px;
+}
+.crypto_box h3{
+    color: white;
+}
+
+section .crypto_box:hover{
+    background-color: #343232;
+    box-shadow: 5px 5px;
+    transition: 1.5s;
+}
+.up{
+color: #00cc00;
+}
+.down{
+    color: #ff3030;
+}
+.buy{
+    background-color: #fd7d02;
+    height: 30px;
+    width: 80px;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 60px;
+    transition: all ease 0.3s;
+}
+.buy:hover{
+    background-color: #df6d03;
+    cursor: pointer;
+}
+.buy:active{
+    background-color: #b35600;
+}
+/* stock trade page styling */
+/* .stock-trade-container section .crypto_box{
+    background-color: lightgrey;
+} */
+.stock-trade-container .crypto_box h3{
+    color: rgb(233, 233, 0);
+}
+
+/* .stock-trade-container section .crypto_box:hover{
+    background-color: #d56d6d;
+    box-shadow: 5px 5px;
+    transition: 1.5s;
+} */
+.stock-trade-container .up{
+color: #05d40c;
+}
+.stock-trade-container .down{
+    color: rgb(255, 31, 31);
+}
+.start-kyc{
+    background-color: #101013;
+    color: #fff;
+    box-sizing: border-box;
+    height: 225px;
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center ;
+    /* margin-left: 30px; */
+    border-radius: 5px;
+    box-shadow: -2px -2px 5px 0px #000000;
+}
+.kyc-form{
+    border: 1px solid white;
+    padding: 20px;
+    width: fit-content; 
+    border-radius: 10px;
+    margin:10vh auto;
+}
+#dob::-webkit-calendar-picker-indicator {
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 5px;
+}
+.buy-page-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.graph-buy-section{
+    display: flex;
+    padding:10px 30px;
+    border-radius: 20px;
+    gap:20px;
+}
+.graph-buttons{
+    margin-top: 10px;
+}
+.graph-buttons button{
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px;
+    width: 50px;
+    border: 2px solid rgb(153, 153, 153);
+    border-radius: 25px;
+    margin: 10px 20px;
+}
+.graph-buttons button:hover{
+    cursor: pointer;
+    background-color: rgba(26, 26, 26, 0.493);
+    border: 2px solid rgb(100, 100, 100);
+}
+.graph-buttons button:active{
+    background-color: rgba(26, 26, 26, 0.493);
+    border: 2px solid rgb(48, 48, 48);
+}
+#buy-button{
+    background-color: lightseagreen;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 3px rgb(18, 92, 88);
+}
+#sell-button{
+    background-color: rgb(255, 83, 64);
+    color: white;
+    font-size: 17px;
+    border: none;
+    padding: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 3px rgb(175, 41, 27);
+}
+#buy-button:hover{
+    cursor: pointer;
+    background-color: rgb(20, 145, 138);
+}
+#sell-button:hover{
+    cursor: pointer;
+    background-color: rgb(219, 61, 43);
+}
+#buy-button:active,#sell-button:active{
+    box-shadow: 0 0px;
+    transform: translateY(1px);
+}
+.buy-section{
+    display: flex;
+    flex-direction: column;
+    margin-top:10.4vh;
+    padding: 20px;
+    height: max-content;
+    border: 2px solid gray;
+    border-radius: 15px;
+
+}
+.graph img{
+    height: 55vh;
+    width: 55vw;
+}
+.quantity-field input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+}
+.quantity-field input[type=number]::-webkit-inner-spin-button,
+.quantity-field input[type=number]::-webkit-outer-spin-button { 
+-webkit-appearance: none;
+}
+.quantity-field button{
+    width: 35px;
+    height: 35px;
+    margin: auto 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    color: orange;
+    background-color: #232325;
+    border: none;
+}
+.quantity-field button:hover{
+    cursor: pointer;
+    background-color: #404042;
+}
+.quantity-field button:active{
+    background-color: #232325;
+}

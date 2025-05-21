@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=content-width, initial-scale=1.0">
+<title>Admin Add Crypto</title>
+<script src="https://kit.fontawesome.com/1c8d865763.js" crossorigin="anonymous"></script>
+<link rel="icon" type="img/x-icon" href="./assets/images/cryptocurrency.png">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    .cryptoContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 15vh auto;
+    padding: 0 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.cryptoSection {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.cryptoSection label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.cryptoSection input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.cryptoSection input:focus {
+    border-color: orange;
+}
+.btn-add {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    width: 120px; 
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    display: block; 
+    margin: 10px auto; 
+    text-align: center;
+}
+
+.btn-add:hover {
+    background: #218838;
+}
+</style>
+</head>
+<body>
+    <!-- navigatin bar start -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-title" >
+                <a href="./adminUserDetails.html"><img src="./assets/images/cryptocurrency.png" alt="cryptocurrency" height="30px"><p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="./adminUserDetails.html">User Details</a>
+                    </li>
+                    <li>
+                        <a href="./adminAddCrypto.html">Add Crypto</a>
+                    </li>
+                    <li>
+                        <a href="./adminAddStock.html">Add Stock</a>
+                    </li>
+                </ul>
+            </div>  
+            <div class="nav-loggedin-buttons">
+                <div class="nav-links">
+                            <span>
+                                <img src="./assets/images/shiba-inu.png" alt="shiba-inu" height="30px" style="background-color:bisque;border-radius: 50%;padding: 2px">
+                            </span>
+                            &nbsp;
+                            <span style="position: relative; bottom: 10px;">
+                                <a href="./adminLogin.html" class="login">Logout</a>      
+                            </span>  
+                </div>
+            </div>
+        </nav>
+    </header>   
+    <!-- navigation bar end -->
+     <!-- crypto Add admin -->
+            
+     <div class="cryptoContainer">
+        <form>
+            <div class="cryptoSection">
+                <h2 style="color: #000;">Crypto Market Admin Panel</h2>
+                <label for="cryptoname">CryptoCurrency Name</label>
+                <input type="text" id="cryptoname" name="Crypto Name" placeholder="Enter Crypto Currency Name" required>
+    
+                <label for="price">Price(USD)</label>
+                <input type="number" id="price" name="market price" placeholder="Enter current  market price" required>
+    
+                <label for="change">24th Price Change(%)</label>
+                <input type="text" id="change" name="24th price change" placeholder="Enter the Price Change" required>
+    
+                <label for="trading">Trading Volume(24h)</label>
+                <input type="text" id="trading" name="trading volume" placeholder="Enter the trading volume" required>
+
+                <label for="marketcap">Market Cap(USD)</label>
+                <input type="text" id="marketcap" name="market cap" placeholder="Enter the market cap" required>
+    
+                <button type="button" id="addCryptoBtn" class="btn-add">Add Stock</button>
+    
+            </div>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <footer style="position: fixed; bottom: 0; width: 100%;">
+        <div class="copyright">
+            <p>&copy; 2025 <strong>stockrypt</strong>. All rights reserved.</p>
+            <p>Combining the best of Crypto & Stock Exchange for smarter investments</p>
+        </div>
+    </footer>
+</body>
+</html>

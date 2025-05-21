@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=content-width, initial-scale=1.0">
+<title>User Homepage</title>
+<script src="https://kit.fontawesome.com/1c8d865763.js" crossorigin="anonymous"></script>
+<link rel="icon" type="img/x-icon" href="./assets/images/cryptocurrency.png">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navigatin bar start -->
+     <header>
+        <nav class="navbar">
+            <div class="nav-title" >
+                <a href="#"><img src="./assets/images/cryptocurrency.png" alt="cryptocurrency" height="30px"><p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="#">Market&nbsp;<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoMarketAfterLogin.html">Crypto</a></li>
+                            <li><a href="./stockMarketAfterLogin.html">Stock</a></li>
+                        </ul>
+                </li>
+                    <li>
+                        <a href="#">Trade&nbsp;<i class="fa fa-caret-down"></i></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoTradeAfterLogin.html">Crypto</a></li>
+                            <li><a href="./stockTradeAfterLogin.html">Stock</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="./learnAfterLogin.html">Learn</a></li>
+                </ul>
+            </div>  
+            <div class="nav-loggedin-buttons">
+                <a href="./wallet.html" class="wallet-icon">
+                     <img src="./assets/images/wallet.svg" alt="wallet" height="30px">
+                </a>
+                <div class="nav-links">
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="./assets/images/shiba-inu.png" alt="shiba-inu" height="30px" style="background-color:bisque;border-radius: 50%;padding: 2px">
+                            </span>
+                            &nbsp;
+                            <span style="position: relative; bottom: 10px;">
+                                <a href="#" class="login"><span class="fetch-username"></span>&nbsp;<i class="fa fa-caret-down"></i></a>      
+                            </span>  
+                            <ul class="dropdown">
+                                <li><a href="./profile.html">Profile</a></li>
+                                <li><a href="./settings.html">Settings</a></li>
+                                <li><a href="./index.html" class="login">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>   
+    <!-- navigation bar end -->
+    <!-- landing page after login -->
+    <div class="landing-page-container" style="width:fit-content;margin: auto;">
+        <h2 style="margin-top: 90px;">Welcome <span class="fetch-username"></span> !</h2>
+        <div class="start-kyc">
+            <img src="./assets/images/kyc.png" alt="kyc" height="70px" style="display: block;">
+            <span>
+            <p style="text-align: center;">Complete your <br>profile</p>
+            <a href="./kycForm.html"><button class="orange-button">Start KYC</button></a>
+            </span>
+        </div>
+        <h3>Indices</h3>
+        <div class="toggle1">
+            <div class="one">
+                <table>
+                    <tr>
+                        <td><b>NIFTY</b></td>
+                    </tr>
+                    <tr>
+                        <td>22,337.30<span style="color: lightgreen;"> 256.65 (1.15%)</span></td>
+                    </tr>
+                    <!-- <tr>
+                        <td style="color: lightgreen;">256.65 (1.15%)</td>
+                    </tr> -->
+                </table>
+            </div>
+            <div class="two">
+                <table>
+                    <tr>
+                        <td><b>SENSEX</b></td>
+                    </tr>
+                    <tr>
+                        <td>73,730.33 <span style="color: lightgreen;">740.30 (1.01%)</span></td>
+                    </tr>
+                    <!-- <tr>
+                        <td style="color: lightgreen;">740.30 (1.01%)</td>
+                    </tr> -->
+                </table>
+            </div>
+            <div class="three">
+                <table>
+                    <tr>
+                        <td><b>BANKNIFTY</b></td>
+                    </tr>
+                    <tr>
+                        <td>48,489.95 <span style="color: lightgreen;">244.75 (0.51%)</span></td>
+                    </tr>
+                    <!-- <tr>
+                        <td style="color: lightgreen;">244.75 (0.51%)</td>
+                    </tr> -->
+                </table>
+            </div>
+            <div class="four">
+                <table>
+                    <tr>
+                        <td><b>FINNIFTY</b></td>
+                    </tr>
+                    <tr>
+                        <td>23,050.60 <span style="color: lightgreen;">22.15 (0.10%)</span></td>
+                    </tr>
+                    <!-- <tr>
+                        <td style="color: lightgreen;">22.15 (0.10%)</td>
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+        <h3>Trending coins</h3>
+        <div class="toggle">
+            <div class="hot">
+                <h5>Hot Coins</h5>
+                <!-- <h6 id="more">More></h6> -->
+                <br><br>
+                <table>
+                    <tr>
+                        <td><b>BNB</b></td>
+                        <td>$598.73</td>
+                        <td style="color: lightgreen;">+4.75%</td>
+                    </tr>
+                    <tr>
+                        <td><b>BTC</b></td>
+                        <td>$89.81K</td>
+                        <td style="color: lightgreen;">+7.00%</td>
+                    </tr>
+                    <tr>
+                        <td><b>ETH</b></td>
+                        <td>$2.21K</td>
+                        <td style="color: lightgreen;">+5.66%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="listing">
+                <h5>New Listing</h5>
+                <!-- <h6 id="more">More></h6> -->
+                <br><br>
+                <table>
+                    <tr>
+                        <td><b>GPS</b></td>
+                        <td>$0.0661</td>
+                        <td style="color: rgb(255, 0, 0);">-36.93%</td>
+                    </tr>
+                    <tr>
+                        <td><b>SHELL</b></td>
+                        <td>$0.3528</td>
+                        <td style="color: lightgreen;">+1.26%</td>
+                    </tr>
+                    <tr>
+                        <td><b>KAITO</b></td>
+                        <td>$1.80</td>
+                        <td style="color: lightgreen;">+16.91%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="gainer">
+                <h5>Top Gainer Coin</h5>
+                <!-- <h6 id="more">More></h6> -->
+                <br><br>
+                <table>
+                    <tr>
+                        <td><b>BCH</b></td>
+                        <td>$383.30</td>
+                        <td style="color: lightgreen;">+26.51%</td>
+                    </tr>
+                    <tr>
+                        <td><b>AAVE</b></td>
+                        <td>$218.19</td>
+                        <td style="color: lightgreen;">+24.76%</td>
+                    </tr>
+                    <tr>
+                        <td><b>ADA</b></td>
+                        <td>$0.9903</td>
+                        <td style="color: lightgreen;">+23.77%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="volume">
+                <h5>Top Volume Coin</h5>
+                <!-- <h6 id="more">More></h6> -->
+                <br><br>  
+                <table>
+                    <tr>
+                        <td><b>BTC</b></td>
+                        <td>$90.25K</td>
+                        <td style="color: lightgreen;">+8.07%</td>
+                    </tr>
+                    <tr>
+                        <td><b>ETH</b></td>
+                        <td>$2.22K</td>
+                        <td style="color: lightgreen;">+6.37%</td>
+                    </tr>
+                    <tr>
+                        <td><b>XRP</b></td>
+                        <td>$2.49</td>
+                        <td style="color: lightgreen;">+5.79%</td>
+                    </tr>
+                </table>  
+            </div>
+        </div>
+    </div>
+    <section id="contact-us">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <p>If you have any questions or need support, feel free to reach out to us. We're here to help you on your trading journey!</p>
+      
+          <div class="contact-info">
+            <div class="contact-item">
+              <h3>Address</h3>
+              <p>123 Trading Street, Financial City, Marketland</p>
+            </div>
+      
+            <div class="contact-item">
+              <h3>Email</h3>
+              <p>support@stockrypt.com</p>
+            </div>
+      
+            <div class="contact-item">
+              <h3>Phone</h3>
+              <p>+1 234 567 890</p>
+            </div>
+          </div>
+      
+          <form action="#">
+            <h3>Get in Touch</h3>
+            <label for="contact-us-name">Name:</label>
+            <input type="text" id="contact-us-name" name="contact-us-name" required>
+      
+            <label for="contact-email">Email:</label>
+            <input type="contact-email" id="contact-email" name="contact-email" required>
+      
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+      
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 <strong>stockrypt</strong>. All rights reserved.</p>
+            <p>Combining the best of Crypto & Stock Exchange for smarter investments</p>
+        </div>
+        <div class="company-socials">
+            <div>
+                <ul>
+                    <li>Company</li>
+                    <li><a href="./index.html#about-us">About us</a></li>
+                    <li><a href="./privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="./termsOfService.html" target="_blank">Terms of Service</a></li>
+                    <li><a href="./userLanding.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Socials</li>
+                    <li><a href="https://x.com" target="_blank" >X (Formerly Twitter)</a></li>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>           
+            </div>  
+        </div> 
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        document.getElementById("contact-us-name").value = sessionStorage.getItem("username");
+        document.getElementById("contact-email").value = sessionStorage.getItem("username").toLowerCase() + "@gmail.com";
+    </script>
+</body>
+</html>

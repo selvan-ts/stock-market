@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=content-width, initial-scale=1.0">
+<title>Crypto Market</title>
+<script src="https://kit.fontawesome.com/1c8d865763.js" crossorigin="anonymous"></script>
+<link rel="icon" type="img/x-icon" href="./assets/images/cryptocurrency.png">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    th {
+            cursor: pointer;
+        }
+        th.sort-asc::after {
+            content: " 🔼";
+        }
+        th.sort-desc::after {
+            content: " 🔽";
+        }
+</style>
+</head>
+<body>
+    <!-- navigatin bar start -->
+     <header>
+        <nav class="navbar">
+            <div class="nav-title" >
+                <a href="./index.html"><img src="./assets/images/cryptocurrency.png" alt="cryptocurrency" height="30px"><p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="#">Market&nbsp;<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Crypto</a></li>
+                            <li><a href="./stockMarket.html">Stock</a></li>
+                        </ul>
+                </li>
+                    <li>
+                        <a href="#">Trade&nbsp;<i class="fa fa-caret-down"></i></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoTrade.html">Crypto</a></li>
+                            <li><a href="./stockTrade.html">Stock</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="./learn.html">Learn</a></li>
+                </ul>
+            </div>  
+            <div class="nav-buttons">
+                <a href="./logIn.html" class="login">Log in</a>
+                <a href="./signUp.html"><button class="signup-button">Sign up</button></a>
+            </div>
+        </nav>
+    </header>   
+    <!-- navigation bar end -->
+     <!-- Crypto market page -->
+     <div class="crypto-market-container">
+        <h1>Cryptocurrency Prices</h1>
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Name</th>
+                    <th onclick="sortTable(1)">Price (USD)</th>
+                    <th onclick="sortTable(2)">Change</th>
+                    <th onclick="sortTable(3)">24h Volume</th>
+                    <th onclick="sortTable(4)">Market Cap (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>BTC</b> Bitcoin</td>
+                    <td>$84,043.86</td>
+                    <td class="down">▼ -9.38</td>
+                    <td>$72.53B</td>
+                    <td>$1,664.34B</td>
+                </tr>
+                <tr>
+                    <td><b>ETH</b> Ethereum</td>
+                    <td>$2,106.67</td>
+                    <td class="down">▼ -10.40%</td>
+                    <td>$34.98B</td>
+                    <td>$253.86B</td>
+                </tr>
+                <tr>
+                    <td><b>USDT</b> TetherUS</td>
+                    <td>$0.99989998</td>
+                    <td>+0.00%</td>
+                    <td>$137.31B</td>
+                    <td>$142.43B</td>
+                </tr>
+                <tr>
+                    <td><b>XRP</b></td>
+                    <td>$2.36</td>
+                    <td class="down">▼ -10.30%</td>
+                    <td>$12.70B</td>
+                    <td>$138.58B</td>
+                </tr>
+                <tr>
+                    <td><b>BNB</b></td>
+                    <td>$570.91</td>
+                    <td class="down">▼ -5.51%</td>
+                    <td>$2.11B</td>
+                    <td>$81.19B</td>
+                </tr>
+                <tr>
+                    <td><b>SOL</b> Solana</td>
+                    <td>$136.65</td>
+                    <td class="down">▼ -16.74%</td>
+                    <td>$8.78B</td>
+                    <td>$69.82B</td>
+                </tr>
+                <tr>
+                    <td><b>USDC</b> USD Coin</td>
+                    <td>$1.00</td>
+                    <td class="up">▲ +0.03%</td>
+                    <td>$14.62B</td>
+                    <td>$56.31B</td>
+                </tr>
+                <tr>
+                    <td><b>ADA</b> Cardano</td>
+                    <td>$0.807</td>
+                    <td class="down">▼ -18.47%</td>
+                    <td>$5.39B</td>
+                    <td>$28.95B</td>
+                </tr>
+                <tr>
+                    <td><b>DOGE</b> Dogecoin</td>
+                    <td>$0.19246</td>
+                    <td class="down">▼ -12.15%</td>
+                    <td>$2.67B</td>
+                    <td>$28.75B</td>
+                </tr> 
+                <tr>
+                    <td><b>TRX</b> TRON</td>
+                    <td>$0.2354</td>
+                    <td class="down">▼ -3.13%</td>
+                    <td>$1.01B</td>
+                    <td>$23.67B</td>
+                </tr> 
+                <tr>
+                    <td><b>XLM</b> Steller Lumens</td>
+                    <td>$0.2856</td>
+                    <td class="down">▼ -14.06%</td>
+                    <td>$412.66M</td>
+                    <td>$13.57B</td>
+                </tr>  
+                <tr>
+                    <td><b>SHIB</b> SHIBA INU</td>
+                    <td>$0.00001282</td>
+                    <td class="down">▼ -9.46%</td>
+                    <td>$465.25M</td>
+                    <td>$12.83B</td>
+                </tr>
+                <tr>
+                    <td><b>WBTC</b> Wrapped Bitcoin</td>
+                    <td>$83,630.51</td>
+                    <td class="down">▼ -9.80%</td>
+                    <td>$562.58M</td>
+                    <td>$10.83B</td>
+                </tr>
+                <tr>
+                    <td><b>HBAR</b> Hedera Hashgraph</td>
+                    <td>$0.2411</td>
+                    <td class="down">▼ -3.62%</td>
+                    <td>$890.85M</td>
+                    <td>$10.20B</td>
+                </tr>
+                <tr>
+                    <td><b>LINK</b> ChainLink</td>
+                    <td>$13.80</td>
+                    <td class="up">▲ +16.63%</td>
+                    <td>$797.03M</td>
+                    <td>$8.84B</td>
+                </tr>
+                <tr>
+                    <td><b>AVAX</b> Avalanche</td>
+                    <td>$19.85</td>
+                    <td class="down">▼ -16.03%</td>
+                    <td>$725.75M</td>
+                    <td>$8.27B</td>
+                </tr>
+                <tr>
+                    <td><b>LTC</b> Litecoin</td>
+                    <td>$101.40</td>
+                    <td class="down">▼ -13.39%</td>
+                    <td>$1.49B</td>
+                    <td>$7.76B</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 <strong>stockrypt</strong>. All rights reserved.</p>
+            <p>Combining the best of Crypto & Stock Exchange for smarter investments</p>
+        </div>
+        <div class="company-socials">
+            <div>
+                <ul>
+                    <li>Company</li>
+                    <li><a href="./index.html#about-us">About us</a></li>
+                    <li><a href="./privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="./termsOfService.html" target="_blank">Terms of Service</a></li>
+                    <li><a href="./index.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Socials</li>
+                    <li><a href="https://x.com" target="_blank" >X (Formerly Twitter)</a></li>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>           
+            </div>  
+        </div> 
+    </footer>
+    <script src="./assets/js/tableSort.js">
+    </script>
+</body>
+</html>

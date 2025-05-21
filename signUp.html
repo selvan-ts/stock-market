@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=content-width, initial-scale=1.0">
+<title>Sign up</title>
+<script src="https://kit.fontawesome.com/1c8d865763.js" crossorigin="anonymous"></script>
+<link rel="icon" type="img/x-icon" href="./assets/images/cryptocurrency.png">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navigatin bar start -->
+    <nav class="navbar">
+        <div class="nav-title" >
+            <a href="./index.html"><img src="./assets/images/cryptocurrency.png" alt="cryptocurrency" height="30px"><p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="#">Market&nbsp;<i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="./cryptoMarket.html">Crypto</a></li>
+                        <li><a href="./stockMarket.html">Stock</a></li>
+                    </ul>
+              </li>
+                <li>
+                    <a href="#">Trade&nbsp;<i class="fa fa-caret-down"></i></i></a>
+                    <ul class="dropdown">
+                        <li><a href="./cryptoTrade.html">Crypto</a></li>
+                        <li><a href="./stockTrade.html">Stock</a></li>
+                    </ul> 
+                </li>
+                <li><a href="./learn.html">Learn</a></li>
+            </ul>
+        </div>  
+        <div class="nav-buttons">
+            <a href="./logIn.html" class="login">Log in</a>
+            <a href="#"><button class="signup-button">Sign up</button></a>
+        </div>
+    </nav>
+    <!-- navigation bar end -->
+     <!-- crypto and stock catch phrases -->
+    <div class="container">
+        <div class="crypto-section">
+            <div>
+                <img src="./assets/images/bitcoin.gif" alt="bitcoin-gif" style="height: 55vh;">  
+            </div>
+            <div >
+                <p class="crypto-slogan">Your One-Stop Stock <br>and Crypto Trading Hub</p>
+                <p class="new-user-reward-line" style="color: #000;">Sign up now and get <span style="color: #eb9903;">+50&nbsp;<i class="fa fa-coins"></i></span> credits worth Rs 500 added to your wallet!</p> 
+                <a href="./signUp.html"><button class="get-started">Get Started</button></a>
+            </div>
+        </div>
+        <div class="stock-section">
+            <div class="stock-slogan">
+                <p>Simplifying Stock <br>and Crypto Investments</p>
+            </div>
+            <div>
+                <img src="./assets/images/stock.gif" alt="stock-gif">
+            </div>
+        </div>
+    </div>
+    <!-- sign up form -->
+     <div class="sign-up-container" style="height: 118.5vh;">
+        <div class="sign-up-form" >
+            <div style="text-align: center;color: white;">
+                <p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+            </div>
+            <p class="new-user-reward-line"><span style="color: #eb9903;">+50&nbsp;<i class="fa fa-coins"></i></span> credits worth Rs 500 on sign up!</p>
+            <label for="google">Sign up with</label>
+                <button name="google" id="google"><img src="./assets/images/google.png" alt="google" height="26px"><p>Google</p></button>
+            <form action="./logIn.html">
+                <p style="text-align: center;">OR</p>
+                <label for="email">Email<sup>*</sup></label>
+                <input type="email" name="email" id="email" placeholder="example@domain.com" required>
+                <label for="phone">Phone Number<sup>*</sup></label>
+                <input type="tel" name="phone" id="phone" class="textbox-styling" placeholder="10 digit phone number" maxlength="10" required>
+                <label for="username">Username<sup>*</sup></label>
+                <input type="username" name="username" id="username" maxlength="20" placeholder="Preferred username (Alphanumeric upto 20 characters)" class="textbox-styling" required>
+                <label for="password">Password<sup>*</sup></label>
+                <input type="password" name="password" id="password" minlength="6" maxlength="12" placeholder="Min 6 and upto 12 characters" style="margin-bottom: 4px;" required>
+                <p style="margin: 0 0 20px; text-align: end;"><sup>*</sup>(Required)</p>
+                <input type="checkbox" name="agree" id="agree" required>
+                <label for="agree" class="no-select">I agree to the Stockrypt's <a href="./termsOfService.html" target="_blank">Terms of Use</a> and <a href="./privacyPolicy.html" target="_blank">Privacy Policy</a>.</label>
+                <div class="disclaimer">
+                    <p><strong>Disclaimer : </strong>Trading stocks and cryptocurrencies involves significant risk of loss. By signing up, you acknowledge that you understand the risks involved and agree to trade responsibly.</p>
+                </div>
+                <input type="submit" name="sign-up" id="sign-up" value="Sign Up">
+            </form>
+            <p>Already have an account? Click here to <a href="./logIn.html">Log in</a></p>
+        </div>
+     </div>
+    <!-- footer -->
+    <footer style="margin-top: 16vh;">
+        <div class="copyright">
+            <p>&copy; 2025 <strong>stockrypt</strong>. All rights reserved.</p>
+            <p>Combining the best of Crypto & Stock Exchange for smarter investments</p>
+        </div>
+        <div class="company-socials">
+            <div>
+                <ul>
+                    <li>Company</li>
+                    <li><a href="./index.html#about-us">About us</a></li>
+                    <li><a href="./privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="./termsOfService.html" target="_blank">Terms of Service</a></li>
+                    <li><a href="./index.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Socials</li>
+                    <li><a href="https://x.com" target="_blank" >X (Formerly Twitter)</a></li>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>           
+            </div>  
+        </div> 
+    </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=content-width, initial-scale=1.0">
+<title>KYC</title>
+<script src="https://kit.fontawesome.com/1c8d865763.js" crossorigin="anonymous"></script>
+<link rel="icon" type="img/x-icon" href="./assets/images/cryptocurrency.png">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navigatin bar start -->
+     <header>
+        <nav class="navbar">
+            <div class="nav-title" >
+                <a href="./userLanding.html"><img src="./assets/images/cryptocurrency.png" alt="cryptocurrency" height="30px"><p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="#">Market&nbsp;<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoMarketAfterLogin.html">Crypto</a></li>
+                            <li><a href="./stockMarketAfterLogin.html">Stock</a></li>
+                        </ul>
+                </li>
+                    <li>
+                        <a href="#">Trade&nbsp;<i class="fa fa-caret-down"></i></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoTradeAfterLogin.html">Crypto</a></li>
+                            <li><a href="./stockTradeAfterLogin.html">Stock</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="./learnAfterLogin.html">Learn</a></li>
+                </ul>
+            </div>  
+            <div class="nav-loggedin-buttons">
+                <a href="./wallet.html" class="wallet-icon">
+                     <img src="./assets/images/wallet.svg" alt="wallet" height="30px">
+                </a>
+                <div class="nav-links">
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="./assets/images/shiba-inu.png" alt="shiba-inu" height="30px" style="background-color:bisque;border-radius: 50%;padding: 2px">
+                            </span>
+                            &nbsp;
+                            <span style="position: relative; bottom: 10px;">
+                                <a href="#" class="login"><span class="fetch-username"></span>&nbsp;<i class="fa fa-caret-down"></i></a>      
+                            </span>  
+                            <ul class="dropdown">
+                                <li><a href="./profile.html">Profile</a></li>
+                                <li><a href="./settings.html">Settings</a></li>
+                                <li><a href="./index.html" class="login">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>   
+    <!-- navigation bar end -->
+    <!-- KYC Form -->
+    <div class="kyc-form">
+        <h2 style="text-align: center;">KYC form</h2><p>(Please note : All the fields are mandatory)</p>
+        <form action="#" style="display: flex;">
+            <div style="margin-right:50px ;">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full_name" class="textbox-styling" required>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="textbox-styling" minlength="10" maxlength="10" required>
+            <label for="Aadhar">Aadhar Number</label>
+            <input type="tel" id="Aadhar" name="Aadhar" class="textbox-styling" minlength="12" maxlength="12" required>
+            <label for="pan">PAN Number</label>
+            <input type="text" id="pan" name="pan" class="textbox-styling" minlength="10" maxlength="10" required>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" class="textbox-styling"  required>   
+            </div>
+            <div>
+             <label for="address">Residential Address</label>
+            <textarea id="address" name="address" class="textbox-styling" style="height: 100px;" required></textarea>
+            <label for="state">State of Residence</label>
+            <select name="state" id="state" class="textbox-styling" required>
+                <option value="">Select a State</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+            
+            <label for="image-upload">Upload your recent photo :</label>
+            <input type="file" id="image-upload" name="image-upload" accept="image/*" required><br><br>
+            <button type="submit" class="orange-button">Submit</button>   
+            </div>
+            
+        </form>
+    </div>   
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 <strong>stockrypt</strong>. All rights reserved.</p>
+            <p>Combining the best of Crypto & Stock Exchange for smarter investments</p>
+        </div>
+        <div class="company-socials">
+            <div>
+                <ul>
+                    <li>Company</li>
+                    <li><a href="./index.html#about-us">About us</a></li>
+                    <li><a href="./privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="./termsOfService.html" target="_blank">Terms of Service</a></li>
+                    <li><a href="./userLanding.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Socials</li>
+                    <li><a href="https://x.com" target="_blank" >X (Formerly Twitter)</a></li>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>           
+            </div>  
+        </div> 
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=content-width, initial-scale=1.0">
+<title>Profile</title>
+<script src="https://kit.fontawesome.com/1c8d865763.js" crossorigin="anonymous"></script>
+<link rel="icon" type="img/x-icon" href="./assets/images/cryptocurrency.png">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Profile Container */
+.profile-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    justify-content: space-around;
+    margin: 10vh 2vh;  
+}
+
+/* User Picture Section */
+.user-pic-container {
+    flex: 1 1 250px;
+    text-align: center;
+    background-color: #ffffff;
+    /* padding: 15px; */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.user-pic-container img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.user-pic-container p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: black;
+}
+.user-pic-container button{
+    width:100%;
+    border: none;
+    padding: 20px;
+}
+.user-pic-container button:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+/* User Details Section */
+.user-details-container {
+    flex: 1 1 300px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+    
+}
+
+.user-details-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-details-container li {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Transactions and Wallet Section */
+.transactions-wallet-container 
+    {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center;       */
+        justify-content: center;
+        gap: 20px;
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        color: black;
+        text-align: center;
+        width: 30%;
+        
+    }
+    .transactions-container,.wallet-container1
+    {
+        border: 2px solid black;
+        padding: 3px;
+        margin: 3px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .wallet-container1 ul,.transactions-container ul
+    {
+        list-style-type: none;
+        padding: 5px;
+        margin: 0;   
+    }
+    .icon1
+    {
+    color: #eb9903;
+    }
+    .equivalent,.conversion 
+    {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;    
+    }
+    .conversion 
+    {
+    font-size: 12px;
+    font-weight: bold;
+    color: black; 
+    }
+    h2
+    {
+        margin-bottom: 10px;
+        padding: 5px;
+        
+    }
+    .equivalent,.balance
+    {
+        margin-bottom: 10px;
+    }
+    .transactions-container li,.wallet-container1 li 
+    {
+    background: rgb(219, 218, 218);
+    margin: 6px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    }
+    .balance
+    {
+        font-size: 20px;
+    }
+    .transactions-container
+    {
+        background-color: rgb(108 88 76);
+    }
+    .wallet-container1
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(108 88 76);
+    }
+    .transactions-wallet-container a
+    {
+        color: black;
+    }
+    </style>
+</head>
+<body>
+    <!-- navigatin bar start -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-title" >
+                <a href="./userLanding.html"><img src="./assets/images/cryptocurrency.png" alt="cryptocurrency" height="30px"><p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="#">Market&nbsp;<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoMarketAfterLogin.html">Crypto</a></li>
+                            <li><a href="./stockMarketAfterLogin.html">Stock</a></li>
+                        </ul>
+                </li>
+                    <li>
+                        <a href="#">Trade&nbsp;<i class="fa fa-caret-down"></i></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoTradeAfterLogin.html">Crypto</a></li>
+                            <li><a href="./stockTradeAfterLogin.html">Stock</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="./learnAfterLogin.html">Learn</a></li>
+                </ul>
+            </div>  
+            <div class="nav-loggedin-buttons">
+                <a href="./wallet.html" class="wallet-icon">
+                     <img src="./assets/images/wallet.svg" alt="wallet" height="30px">
+                </a>
+                <div class="nav-links">
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="./assets/images/shiba-inu.png" alt="shiba-inu" height="30px" style="background-color:bisque;border-radius: 50%;padding: 2px">
+                            </span>
+                            &nbsp;
+                            <span style="position: relative; bottom: 10px;">
+                                <a href="#" class="login"><span class="fetch-username"></span>&nbsp;<i class="fa fa-caret-down"></i></a>      
+                            </span>  
+                            <ul class="dropdown">
+                                <li><a href="./profile.html">Profile</a></li>
+                                <li><a href="./settings.html">Settings</a></li>
+                                <li><a href="./index.html" class="login">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>   
+    <!-- navigation bar end -->
+    <!-- profile page -->
+    <div class="profile-container">
+        <div class="user-pic-container" style="display: flex; flex-direction: column; justify-content: space-between;background-color: bisque;">
+            <div>
+                <img src="./assets/images/shiba-inu.png" alt="User Image" width="150" height="150" style="background-color: rgb(236, 195, 145); margin-top: 20px;">
+                <p><span class="fetch-username"></span></p>
+                <p><span class="fetch-username" style="text-transform: lowercase;"></span>@gmail.com</p>
+                <p>Bangalore</p>
+            </div>
+            <div>
+                <a href="./settings.html"><button>Edit details <span style="float: right;"><i class="fa fa-chevron-right"></i></span></button></a>
+                <a href="./settings.html"><button>Change Password <span style="float: right;"><i class="fa fa-chevron-right"></i></span></button></a>
+                <a href="./profitAndLossReport.html"><button style="border-radius: 0 0 10px 10px;">Profit and Loss report<span style="float: right;"><i class="fa fa-chevron-right"></i></span></button></a>
+            </div>
+        </div>
+        <div class="user-details-container">
+            <ul style="text-align: start; display: flex; justify-content: space-around;">
+                <!-- <span>
+                    <li><p>Name: <span>User Name</span></p></li>
+                    <li><p>Date of Birth (DD/MM/YYYY): <span>**/**/19**</span></p></li>
+                    <li><p>Mobile Number: <span>99xxxxxx</span></p></li>
+                    <li><p>Email: <span>user@gmail.com</span></p></li>
+                    <li><p>State of Residence: <span>User Place</span></p></li>  
+                    <li><p>Gender: <span>User Gender</span></p></li>
+                    <li><p>Marital Status: <span>Single/Married</span></p></li>  
+                </span>
+                <span>
+                    <li><p>Pan Number: <span>*****123A</span></p></li>
+                    <li><p>Demat Acc Number / BOID: <span>1234567890xxxxxx</span></p></li>
+                    <li><p>Unique Client Code: <span>1234567890</span></p></li>   
+                </span> -->
+                <span>
+                    <label for="profile-username">Name:</label><br>
+                    <input type="text" id="profile-username" name="profile-username" readonly><br><br>
+                
+                    <label for="profile-dob">Date of Birth (DD/MM/YYYY):</label><br>
+                    <input type="text" id="profile-dob" name="profile-dob" value="**/**/1999" readonly><br><br>
+                
+                    <label for="profile-mobile">Mobile Number:</label><br>
+                    <input type="text" id="profile-mobile" name="profile-mobile" value="9xxxxx23" readonly><br><br>
+                
+                    <label for="profile-email">Email:</label><br>
+                    <input type="email" id="profile-email" name="profile-email" value="R*****@gmail.com" readonly><br><br>
+                
+                    <label for="profile-state">State of Residence:</label><br>
+                    <input type="text" id="profile-state" name="profile-state" value="Bangalore" readonly><br><br>
+                
+                    <label for="profile-gender">Gender:</label><br>
+                    <input type="text" id="profile-gender" name="profile-gender" value="Male" readonly>
+                </span>
+                <span>
+                    <label for="profile-marital_status">Marital Status:</label><br>
+                    <input type="text" id="profile-marital_status" name="profile-marital_status" value="Single" readonly><br><br>
+                
+                    <label for="profile-pan">Pan Number:</label><br>
+                    <input type="text" id="profile-pan" name="profile-pan" value="*****123A" readonly><br><br>
+                
+                    <label for="profile-demat_account">Demat Acc Number / BOID:</label><br>
+                    <input type="text" id="profile-demat_account" name="profile-demat_account" value="12345678902424" readonly><br><br>
+                
+                    <label for="profile-client_code">Unique Client Code:</label><br>
+                    <input type="text" id="profile-client_code" name="profile-client_code" value="1234567890" readonly>  <br><br>
+                </span>            
+            </ul>
+        </div>
+        <div class="transactions-wallet-container">
+            <div class="wallet-container1">
+                <h2>Wallet Balance</h2>
+                <ul>
+                    <li class="balance"><span id="coinBalance">50 <span class="icon1"><i class="fa fa-coins"></i></span></span>&nbsp;Coins</li>
+                    <li class="equivalent">₹<span id="rupeeBalance">500</span></li>
+                    <li class="conversion">1<span class="icon1"><i class="fa fa-coins"></i></span> credit = ₹10</li>
+                    <!-- <li>50 Coins</li>
+                    <li>₹ 500</li>
+                    <li>1 coin = ₹10</li> -->
+                </ul>
+            </div>
+           <div class="transactions-container">
+                <h2>Transaction History</h2>
+                <ul id="transactionList">
+                    <li><span style="display:flex; justify-content: space-between;"><span>New Account Created</span><span>&nbsp;  <span id="coinBalance">+50 <span class="icon1"><i class="fa fa-coins"></i></span></span> Credits</span></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer style="position: fixed; bottom: 0; width: 100%;">
+        <div class="copyright">
+            <p>&copy; 2025 <strong>stockrypt</strong>. All rights reserved.</p>
+            <p>Combining the best of Crypto & Stock Exchange for smarter investments</p>
+        </div>
+        <div class="company-socials">
+            <div>
+                <ul>
+                    <li>Company</li>
+                    <li><a href="./index.html#about-us">About us</a></li>
+                    <li><a href="./privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="./termsOfService.html" target="_blank">Terms of Service</a></li>
+                    <li><a href="./userLanding.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Socials</li>
+                    <li><a href="https://x.com" target="_blank" >X (Formerly Twitter)</a></li>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>           
+            </div>  
+        </div> 
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        document.getElementById("profile-username").value = sessionStorage.getItem("username");
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=content-width, initial-scale=1.0">
+<title>Admin Login</title>
+<script src="https://kit.fontawesome.com/1c8d865763.js" crossorigin="anonymous"></script>
+<link rel="icon" type="img/x-icon" href="./assets/images/cryptocurrency.png">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navigatin bar start -->
+    <nav class="navbar" style="justify-content: start;">
+        <div class="nav-title" style="margin-left: 100px;">
+            <a href="#"><img src="./assets/images/cryptocurrency.png" alt="cryptocurrency" height="30px"><p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+        </div>
+    </nav>
+    <!-- navigation bar end -->
+     <!-- crypto and stock catch phrases -->
+    <div class="container">
+        <div class="crypto-section">
+            <div>
+                <img src="./assets/images/bitcoin.gif" alt="bitcoin-gif" style="height: 55vh;">  
+            </div>
+            <div >
+                <p class="crypto-slogan">Your One-Stop Stock <br>and Crypto Trading Hub</p>
+                <p class="new-user-reward-line" style="color: #000;">Sign up now and get <span style="color: #eb9903;">+50&nbsp;<i class="fa fa-coins"></i></span> credits worth Rs 500 added to your wallet!</p>
+                <a href="./signUp.html"><button class="get-started">Get Started</button></a>
+            </div>
+        </div>
+        <div class="stock-section">
+            <div class="stock-slogan">
+                <p>Simplifying Stock <br>and Crypto Investments</p>
+            </div>
+            <div>
+                <img src="./assets/images/stock.gif" alt="stock-gif">
+            </div>
+        </div>
+    </div>
+    <!-- sign up form -->
+     <div class="sign-up-container">
+        <div class="sign-up-form">
+            <div style="text-align: center;color: white;">
+                <p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+                <p><h1>Admin Login</h1></p>
+            </div>
+            <form action="./adminUserDetails.html">
+                <label for="email">UserID</label>
+                <input type="text" name="email" id="email" placeholder="Enter your UserID" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" minlength="6" maxlength="12" placeholder="Enter your password" style="margin-bottom: 10px;" required>
+                <input type="submit" name="log-in" id="log-in" value="Log In" style="margin-bottom: 10px;">
+            </form>
+        </div>
+     </div>
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 <strong>stockrypt</strong>. All rights reserved.</p>
+            <p>Combining the best of Crypto & Stock Exchange for smarter investments</p>
+        </div>
+    </footer>
+</body>
+</html>

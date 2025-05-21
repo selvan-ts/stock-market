@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=content-width, initial-scale=1.0">
+<title>Verification</title>
+<script src="https://kit.fontawesome.com/1c8d865763.js" crossorigin="anonymous"></script>
+<link rel="icon" type="img/x-icon" href="./assets/images/cryptocurrency.png">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navigatin bar start -->
+     <header>
+        <nav class="navbar">
+            <div class="nav-title" >
+                <a href="./index.html"><img src="./assets/images/cryptocurrency.png" alt="cryptocurrency" height="30px"><p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="#">Market&nbsp;<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoMarket.html">Crypto</a></li>
+                            <li><a href="./stockMarket.html">Stock</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Trade&nbsp;<i class="fa fa-caret-down"></i></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoTrade.html">Crypto</a></li>
+                            <li><a href="./stockTrade.html">Stock</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="./learn.html">Learn</a></li>
+                </ul>
+            </div>  
+            <div class="nav-buttons">
+                <a href="./logIn.html" class="login">Log in</a>
+                <a href="./signUp.html"><button class="signup-button">Sign up</button></a>
+            </div>
+        </nav>
+    </header>   
+    <!-- navigation bar end -->
+     <!-- OTP Page -->
+    <div class="div-center">
+        <h3 style="text-align: center;">We have sent a 4 digit verification code to your Email / Phone number.<br><br> Please enter the code below :</h3>
+        <form action="./resetPassword.html">
+            <div class="otp-container" style="margin-top: 20px;">
+                <input type="tel" class="otp-input" maxlength="1" pattern="[0-9]" required/>
+                <input type="tel" class="otp-input" maxlength="1" pattern="[0-9]" required/>
+                <input type="tel" class="otp-input" maxlength="1" pattern="[0-9]" required/>
+                <input type="tel" class="otp-input" maxlength="1" pattern="[0-9]" required/>
+            </div>
+            <button type="submit" class="orange-button" style="margin-top: 30px; width: 215px;">Submit</button>
+            <br>
+            <button type="button" id="resend-code" class="blue-button" style="margin-top: 30px; width: 170px;" onclick="resendCodeTick()">Re-send Code</button><span id="tick" style="color: lightgreen;margin-left: 20px;display: none;">&#10003;</span>
+        </form>
+        <p style="margin-top: 50px; display: none;" id="resent-dialog">The code has been sent to your Email / Phone number!</p>
+    </div>
+    <!-- footer -->
+    <footer style="position: fixed; bottom: 0; width: 100%;">
+        <div class="copyright">
+            <p>&copy; 2025 <strong>Stockrypt</strong>. All rights reserved.</p>
+            <p>Combining the best of Crypto & Stock Exchange for smarter investments</p>
+        </div>
+        <div class="company-socials">
+            <div>
+                <ul>
+                    <li>Company</li>
+                    <li><a href="./index.html#about-us">About us</a></li>
+                    <li><a href="./privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="./termsOfService.html" target="_blank">Terms of Service</a></li>
+                    <li><a href="./index.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Socials</li>
+                    <li><a href="https://x.com" target="_blank" >X (Formerly Twitter)</a></li>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>           
+            </div>  
+        </div> 
+    </footer>
+    <script>
+        function resendCodeTick(){
+            document.getElementById("tick").style.display = "inline";
+            document.getElementById("resend-code").disabled = true;
+            document.getElementById("resent-dialog").style.display = "inline";
+        }
+    </script>
+</body>
+</html>

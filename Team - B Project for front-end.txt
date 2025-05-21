@@ -1,0 +1,14 @@
+Team - B Project for front-end
+
+Cryptocurrency or stocks
+
+we are giving free coins for people who register - eg rs 50
+should contain bitcoin
+
+Take example of grow app!
+
+1. Register
+2. Login
+3. Forgot password
+4. Terms and conditions
+5. Special offer

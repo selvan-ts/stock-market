@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=content-width, initial-scale=1.0">
+<title>Profit and Loss</title>
+<script src="https://kit.fontawesome.com/1c8d865763.js" crossorigin="anonymous"></script>
+<link rel="icon" type="img/x-icon" href="./assets/images/cryptocurrency.png">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    td,th{
+        text-align: center;
+        color: blanchedalmond;
+        padding: 15px 40px;
+    }
+   table 
+    {
+        margin:2vh auto 4vh auto;
+        border-collapse: collapse;
+        height: 700px;
+        width: 900px;
+    }
+    th{
+        background-color: black;
+        padding: 10px;
+        cursor: pointer;
+    }
+    th.sort-asc::after {
+            content: " 🔼";
+        }
+        th.sort-desc::after {
+            content: " 🔽";
+        }
+    .pl-button{
+        padding: 15px;
+        margin: 0 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(245, 142, 45);
+        color: white;
+        box-shadow: 0 3px rgb(185, 106, 31);
+}
+.pl-button:hover{
+    cursor: pointer;
+    background-color: rgb(233, 132, 38);
+}
+.pl-button:active{
+    box-shadow: none;
+    transform: translateY(1px);
+}
+#crypto-table{
+    display: none;
+}
+</style>
+</head>
+<body>
+    <!-- navigatin bar start -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-title" >
+                <a href="./userLanding.html"><img src="./assets/images/cryptocurrency.png" alt="cryptocurrency" height="30px"><p class="logo">&nbsp;<span>Stock</span>rypt</p></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="#">Market&nbsp;<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoMarketAfterLogin.html">Crypto</a></li>
+                            <li><a href="./stockMarketAfterLogin.html">Stock</a></li>
+                        </ul>
+                </li>
+                    <li>
+                        <a href="#">Trade&nbsp;<i class="fa fa-caret-down"></i></i></a>
+                        <ul class="dropdown">
+                            <li><a href="./cryptoTradeAfterLogin.html">Crypto</a></li>
+                            <li><a href="./stockTradeAfterLogin.html">Stock</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="./learnAfterLogin.html">Learn</a></li>
+                </ul>
+            </div>  
+            <div class="nav-loggedin-buttons">
+                <a href="./wallet.html" class="wallet-icon">
+                     <img src="./assets/images/wallet.svg" alt="wallet" height="30px">
+                </a>
+                <div class="nav-links">
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="./assets/images/shiba-inu.png" alt="shiba-inu" height="30px" style="background-color:bisque;border-radius: 50%;padding: 2px">
+                            </span>
+                            &nbsp;
+                            <span style="position: relative; bottom: 10px;">
+                                <a href="#" class="login"><span class="fetch-username"></span>&nbsp;<i class="fa fa-caret-down"></i></a>      
+                            </span>  
+                            <ul class="dropdown">
+                                <li><a href="./profile.html">Profile</a></li>
+                                <li><a href="./settings.html">Settings</a></li>
+                                <li><a href="./index.html" class="login">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>   
+    <!-- navigation bar end -->
+    <!-- P&L page -->
+     <div style="margin:10vh 0 2vh 0;text-align: center;">
+        <button class="pl-button" onclick="stockTable()">Stock P&L</button>
+        <button class="pl-button" onclick="cryptoTable()">Crypto P&L</button>
+     </div>
+<div id="stock-table">
+    <table border="1px" solid black id="myTable">
+    
+        <tr>
+            <th onclick="sortTable(0)">Stock name</th>
+            <th onclick="sortTable(1)">Quantity</th>
+            <th onclick="sortTable(2)">Buy date</th>
+            <th onclick="sortTable(3)">Buy price</th>
+            <th onclick="sortTable(4)">Buy value</th>
+            <th onclick="sortTable(5)">Sell Date</th>
+            <th onclick="sortTable(6)">Sell price</th>
+            <th onclick="sortTable(7)">Sell value</th>
+            <TH onclick="sortTable(8)">Realised P&L</TH>
+        </tr>   
+    
+    <tr>
+        <td>LLOYDS ENTERPRISES LTD</td>
+        <td>3</td>
+        <td>12.03.2025</td>
+        <td>43</td>
+        <td>129</td>
+        <td>12.03.2024</td>
+        <td>55</td>
+        <td>165</td>
+        <TD>39</TD>
+        </tr>
+    
+    <tr>
+        <td>IDBI BANK LIMITED</td>
+        <td>1</td>
+        <td>29.08.2024</td>
+        <td>38</td>
+        <td>38</td>
+        <td>30.08.2024</td>
+        <td>39</td>
+        <td>39</td>
+        <td>1</td>
+        </tr>
+        
+    <tr>
+        <td>PUNJAB NATION BANK</td>
+        <td>8</td>
+        <td>25.03.2024</td>
+        <td>87</td>
+        <td>696</td>
+        <td>25.03.2024</td>
+        <td>97.5</td>
+        <td>780</td>
+        <td>84</td>
+        </tr>
+        
+    <tr>
+        <td>INDIAN OVERSEAS BANK</td>
+        <td>1</td>
+        <td>19.04.2024</td>
+        <td>367</td>
+        <td>367</td>
+        <td>19.04.2024</td>
+        <td>400</td>
+        <td>400</td>
+        <td>33</td>
+        </tr>
+    
+    <tr>
+        <td>TATA MOTERS LIMITED</td>
+        <td>6</td>
+        <td>08.05.2024</td>
+        <td>43</td>
+        <td>258</td>
+        <td>10.05.2024</td>
+        <td>45.5</td>
+        <td>273</td>
+        <td>15</td>
+        </tr>
+            
+    <tr>
+        <td>OIL AND NATURAL GAS CORPARATION</td>
+        <td>3</td>
+        <td>06.09.2024</td>
+        <td>99.5</td>
+        <td>298.5</td>
+        <td>06.09.2024</td>
+        <td>110</td>
+        <td>330</td>
+        <td>31.5</td>
+        </tr>
+    
+    <tr>
+        <td>YES BANK</td>
+        <td>7</td>
+        <td>15.03.2024</td>
+        <td>67</td>
+        <td>469</td>
+        <td>17.03.2025</td>
+        <td>55</td>
+        <td>385</td>
+        <td>-84</td>
+        </tr>
+    
+    <tr>
+        <td>TITAN COMPANY LIMITED</td>
+        <td>3</td>
+        <td>02.02.2024</td>
+        <td>45</td>
+        <td>135</td>
+        <td>02.02.2024</td>
+        <td>50</td>
+        <td>150</td>
+        <td>15</td>
+    </tr>
+    
+    <tr>
+        <td>ZEE ENTERTAINMENT</td>
+        <td>5</td>
+        <td>1.03.2024</td>
+        <td>40</td>
+        <td>200</td>
+        <td>01.03.2024</td>
+        <td>39.50</td>
+        <td>197.50</td>
+        <td>-2.50</td>
+        </tr>
+    
+    <tr>
+        <td>TATA MOTORS LIMITED</td>
+        <td>2</td>
+        <td>21.09.2024</td>
+        <td>55</td>
+        <td>110</td>
+        <td>21.09.2024</td>
+        <td>57.25</td>
+        <td>114.50</td>
+        <td>2.25</td>
+        </tr>
+    
+        </table>
+</div>
+<div id="crypto-table">
+    <table border="1pc" solid black id="myTable1">
+        <tr>
+            <th onclick="sortTable1(0)">Crypto</th>
+            <th onclick="sortTable1(1)">Quantity</th>
+            <th onclick="sortTable1(2)">Buy date</th>
+            <th onclick="sortTable1(3)">Buy price</th>
+            <th onclick="sortTable1(4)">Buy value</th>
+            <th onclick="sortTable1(5)">Sell Date</th>
+            <th onclick="sortTable1(6)">Sell price</th>
+            <th onclick="sortTable1(7)">Sell value</th>
+            <th onclick="sortTable1(8)">Realised P&L</th>
+        </tr>
+    
+        <tr>
+            <td>XRP</td>
+            <td>10</td>
+            <td>01.05.2024</td>
+            <td>50</td>
+            <td>500</td>
+            <td>15.06.2024</td>
+            <td>60</td>
+            <td>600</td>
+            <td>100</td>
+        </tr>
+    
+        <tr>
+            <td>BNB</td>
+            <td>4</td>
+            <td>20.06.2024</td>
+            <td>40</td>
+            <td>160</td>
+            <td>25.06.2024</td>
+            <td>42.5</td>
+            <td>170</td>
+            <td>10</td>
+        </tr>
+    
+        <tr>
+            <td>BTC Bitcoin</td>
+            <td>2</td>
+            <td>10.07.2024</td>
+            <td>85</td>
+            <td>170</td>
+            <td>15.07.2024</td>
+            <td>100</td>
+            <td>200</td>
+            <td>30</td>
+        </tr>
+    
+        <tr>
+            <td>ETH Ethereum</td>
+            <td>5</td>
+            <td>02.08.2024</td>
+            <td>350</td>
+            <td>1750</td>
+            <td>07.08.2024</td>
+            <td>400</td>
+            <td>2000</td>
+            <td>250</td>
+        </tr>
+    
+        <tr>
+            <td>SOL Solana</td>
+            <td>8</td>
+            <td>05.09.2024</td>
+            <td>55</td>
+            <td>440</td>
+            <td>15.09.2024</td>
+            <td>60</td>
+            <td>480</td>
+            <td>40</td>
+        </tr>
+    
+        <tr>
+            <td>ADA Cardano</td>
+            <td>6</td>
+            <td>12.10.2024</td>
+            <td>90</td>
+            <td>540</td>
+            <td>18.10.2024</td>
+            <td>95</td>
+            <td>570</td>
+            <td>30</td>
+        </tr>
+    
+        <tr>
+            <td>TRX TRON</td>
+            <td>12</td>
+            <td>15.11.2024</td>
+            <td>55</td>
+            <td>660</td>
+            <td>20.11.2024</td>
+            <td>50</td>
+            <td>600</td>
+            <td>-60</td>
+        </tr>
+    
+        <tr>
+            <td>DOGE Dogecoin</td>
+            <td>6</td>
+            <td>21.12.2024</td>
+            <td>38</td>
+            <td>228</td>
+            <td>28.12.2024</td>
+            <td>45</td>
+            <td>270</td>
+            <td>42</td>
+        </tr>
+    
+        <tr>
+            <td>SHIB SHIBA INU</td>
+            <td>8</td>
+            <td>03.01.2025</td>
+            <td>30</td>
+            <td>240</td>
+            <td>08.01.2025</td>
+            <td>32</td>
+            <td>256</td>
+            <td>16</td>
+        </tr>
+    
+        <tr>
+            <td>USDC USD Coin</td>
+            <td>5</td>
+            <td>10.02.2025</td>
+            <td>50</td>
+            <td>250</td>
+            <td>15.02.2025</td>
+            <td>51</td>
+            <td>255</td>
+            <td>5</td>
+        </tr>
+    </table>
+    
+</div>
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 <strong>stockrypt</strong>. All rights reserved.</p>
+            <p>Combining the best of Crypto & Stock Exchange for smarter investments</p>
+        </div>
+        <div class="company-socials">
+            <div>
+                <ul>
+                    <li>Company</li>
+                    <li><a href="./index.html#about-us">About us</a></li>
+                    <li><a href="./privacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="./termsOfService.html" target="_blank">Terms of Service</a></li>
+                    <li><a href="./userLanding.html#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Socials</li>
+                    <li><a href="https://x.com" target="_blank" >X (Formerly Twitter)</a></li>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>           
+            </div>  
+        </div> 
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        function stockTable(){
+            document.getElementById("stock-table").style.display = "block";
+            document.getElementById("crypto-table").style.display = "none";
+        }
+        function cryptoTable(){
+            document.getElementById("stock-table").style.display = "none";
+            document.getElementById("crypto-table").style.display = "block";
+        }
+    </script>
+    <script>
+        let currentSortColumn = -1;  // Keeps track of the currently sorted column
+        let currentSortDirection = 'asc'; // Stores the current sort direction ('asc' or 'desc')
+
+        function sortTable(columnIndex) {
+            const table = document.getElementById("myTable");
+            const rows = Array.from(table.rows).slice(1); // Skip the header row
+            const isNumeric = !isNaN(rows[0].cells[columnIndex].innerText);
+
+            // Toggle the sort direction
+            if (currentSortColumn === columnIndex) {
+                currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSortColumn = columnIndex;
+                currentSortDirection = 'asc';
+            }
+
+            rows.sort((rowA, rowB) => {
+                const cellA = rowA.cells[columnIndex].innerText;
+                const cellB = rowB.cells[columnIndex].innerText;
+
+                if (isNumeric) {
+                    return currentSortDirection === 'asc' 
+                        ? parseFloat(cellA) - parseFloat(cellB) 
+                        : parseFloat(cellB) - parseFloat(cellA);
+                } else {
+                    return currentSortDirection === 'asc' 
+                        ? cellA.localeCompare(cellB) 
+                        : cellB.localeCompare(cellA);
+                }
+            });
+
+            rows.forEach(row => table.appendChild(row)); // Re-append the sorted rows
+
+            // Update column header styles to indicate sorting direction
+            updateSortIndicators();
+        }
+
+        function sortTable1(columnIndex) {
+            const table = document.getElementById("myTable1");
+            const rows = Array.from(table.rows).slice(1); // Skip the header row
+            const isNumeric = !isNaN(rows[0].cells[columnIndex].innerText);
+
+            // Toggle the sort direction
+            if (currentSortColumn === columnIndex) {
+                currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSortColumn = columnIndex;
+                currentSortDirection = 'asc';
+            }
+
+            rows.sort((rowA, rowB) => {
+                const cellA = rowA.cells[columnIndex].innerText;
+                const cellB = rowB.cells[columnIndex].innerText;
+
+                if (isNumeric) {
+                    return currentSortDirection === 'asc' 
+                        ? parseFloat(cellA) - parseFloat(cellB) 
+                        : parseFloat(cellB) - parseFloat(cellA);
+                } else {
+                    return currentSortDirection === 'asc' 
+                        ? cellA.localeCompare(cellB) 
+                        : cellB.localeCompare(cellA);
+                }
+            });
+
+            rows.forEach(row => table.appendChild(row)); // Re-append the sorted rows
+
+            // Update column header styles to indicate sorting direction
+            updateSortIndicators();
+        }
+
+        function updateSortIndicators() {
+            const headers = document.querySelectorAll('th');
+            headers.forEach(header => {
+                header.classList.remove('sort-asc', 'sort-desc'); // Remove all sorting indicators
+            });
+
+            const currentHeader = headers[currentSortColumn];
+            if (currentSortDirection === 'asc') {
+                currentHeader.classList.add('sort-asc');
+            } else {
+                currentHeader.classList.add('sort-desc');
+            }
+        }
+    </script>
+</body>
+</html>
